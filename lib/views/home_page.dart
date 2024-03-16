@@ -14,72 +14,65 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         title: Image.asset(
           'assets/images/X_logo_2023_(white).png',
-          height: 35,
+          height: 40,
         ),
         backgroundColor: const Color(0xff070707),
       ),
-      body: const Expanded(
-        child: Center(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 40),
-            child: Column(
-              children: [
-                SizedBox(
-                  height: 150,
-                ),
-                Text(
-                  "See what's happening in the world right now.",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 31,
-                    fontFamily: 'Chirp',
-                  ),
-                ),
-                SizedBox(
-                  height: 150,
-                ),
-                CustomButtom(
-                  buttomText: 'Continue with Google',
-                  image: 'assets/images/Google__G__logo.svg.png',
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                CustomButtom(
-                  buttomText: 'Continue with Apple',
-                  image: 'assets/images/apple-logo-transparent.png',
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                Row(children: [
-                  Expanded(child: Divider()),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 8),
-                    child: Text(
-                      "Or",
-                      style: TextStyle(color: Colors.white),
+      body: const SingleChildScrollView(
+        child: Column(
+          children: [
+            Center(
+              child: Padding(
+                padding: EdgeInsets.only(left: 40, right: 40, bottom: 40),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 170,
                     ),
-                  ),
-                  Expanded(child: Divider()),
-                ]),
-                SizedBox(
-                  height: 15,
+                    Text(
+                      "See what's happening in the world right now.",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 31,
+                        fontFamily: 'Chirp',
+                      ),
+                    ),
+                    SizedBox(
+                      height: 150,
+                    ),
+                    CustomButtom(
+                      buttomText: 'Continue with Google',
+                      image: 'assets/images/Google__G__logo.svg.png',
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    CustomButtom(
+                      buttomText: 'Continue with Apple',
+                      image: 'assets/images/apple-logo-transparent.png',
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    CustomButtom(
+                      buttomText: 'Create account',
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    WelcomPageRichText(),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    WelcomPageLoginText()
+                  ],
                 ),
-                CustomButtom(
-                  buttomText: 'Create account',
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                WelcomPageRichText(),
-                SizedBox(
-                  height: 50,
-                ),
-                WelcomPageLoginText()
-              ],
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );
