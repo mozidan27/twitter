@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:twitter/views/login_page.dart';
 
 class WelcomPageLoginText extends StatelessWidget {
   const WelcomPageLoginText({
@@ -13,13 +15,23 @@ class WelcomPageLoginText extends StatelessWidget {
         text: TextSpan(
           children: [
             TextSpan(
-              text: 'Have an account already? ,',
+              text: 'Have an account already? ',
               style: TextStyle(color: Colors.grey[600], fontSize: 16),
             ),
-            const TextSpan(
+            TextSpan(
               text: 'Log in',
-              style: TextStyle(color: Color(0xff1c9ef5), fontSize: 16),
-            )
+              style: const TextStyle(color: Color(0xff1c9ef5), fontSize: 16),
+              recognizer: TapGestureRecognizer()
+                ..onTap = () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const LoginPage();
+                      },
+                    ),
+                  );
+                },
+            ),
           ],
         ),
       ),
