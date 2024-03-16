@@ -64,10 +64,16 @@ class _MainPageState extends State<MainPage> {
             ),
             const Expanded(
               child: TabBarView(children: [ForYou(), Following()]),
+            ),
+            Divider(
+              thickness: 0.4,
+              height: 1,
+              color: Colors.grey[700],
             )
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
+          iconSize: 36,
           showSelectedLabels: false,
           showUnselectedLabels: false,
           currentIndex: _selectedIndex,
@@ -77,11 +83,11 @@ class _MainPageState extends State<MainPage> {
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
             BottomNavigationBarItem(icon: Icon(Icons.search), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
             BottomNavigationBarItem(
-                icon: Icon(Icons.notification_add), label: ''),
+                icon: Icon(Icons.people_outlined), label: ''),
             BottomNavigationBarItem(
-                icon: Icon(Icons.message_outlined), label: ''),
+                icon: Icon(Icons.notifications_none), label: ''),
+            BottomNavigationBarItem(icon: Icon(Icons.mail_outline), label: ''),
           ],
           selectedItemColor: Colors.white,
           unselectedItemColor: Colors.white,
