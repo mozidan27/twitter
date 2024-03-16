@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:twitter/views/enter_passwerd_page.dart';
+import 'package:twitter/widgets/clickable_buttom.dart';
+import 'package:twitter/widgets/custom_text_field.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -16,16 +17,16 @@ class LoginPage extends StatelessWidget {
         ),
         backgroundColor: const Color(0xff070707),
       ),
-      body: Expanded(
+      body: const Expanded(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40),
+          padding: EdgeInsets.symmetric(horizontal: 40),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(
+              SizedBox(
                 height: 10,
               ),
-              const Text(
+              Text(
                 'To get started, first enter your phone, email, or @username',
                 style: TextStyle(
                   color: Colors.white,
@@ -33,54 +34,27 @@ class LoginPage extends StatelessWidget {
                   fontFamily: 'Chirp',
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 30,
               ),
-              TextField(
-                decoration: InputDecoration(
-                  hintText: 'phone, email, or @username',
-                  hintStyle: TextStyle(color: Colors.grey[600]),
-                ),
+              CustomTextField(
+                textfieldbody: "phone, email, or @username",
               ),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.only(bottom: 50),
+                  padding: EdgeInsets.only(bottom: 50),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      const Text(
+                      Text(
                         'Forgot password?',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 18,
                             fontWeight: FontWeight.w500),
                       ),
-                      const Spacer(),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) {
-                                return const EnterPasswordPage();
-                              },
-                            ),
-                          );
-                        },
-                        child: Container(
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.white,
-                          ),
-                          height: 40,
-                          width: 80,
-                          child: const Text(
-                            'Next',
-                            style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.w700),
-                          ),
-                        ),
-                      ),
+                      Spacer(),
+                      NextClickableButtom(),
                     ],
                   ),
                 ),
