@@ -16,16 +16,16 @@ class HomePage extends StatelessWidget {
         ),
         backgroundColor: const Color(0xff070707),
       ),
-      body: const Expanded(
+      body: Expanded(
         child: Center(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 40),
+            padding: const EdgeInsets.symmetric(horizontal: 40),
             child: Column(
               children: [
-                SizedBox(
-                  height: 170,
+                const SizedBox(
+                  height: 150,
                 ),
-                Text(
+                const Text(
                   "See what's happening in the world right now.",
                   style: TextStyle(
                     color: Colors.white,
@@ -33,29 +33,113 @@ class HomePage extends StatelessWidget {
                     fontFamily: 'Chirp',
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 150,
                 ),
-                CustomButtom(
+                const CustomButtom(
                   buttomText: 'Continue with Google',
                   image: 'assets/images/Google__G__logo.svg.png',
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
-                CustomButtom(
+                const CustomButtom(
                   buttomText: 'Continue with Apple',
                   image: 'assets/images/apple-logo-transparent.png',
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
-                SizedBox(
+                const Row(children: [
+                  Expanded(child: Divider()),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8),
+                    child: Text(
+                      "Or",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                  Expanded(child: Divider()),
+                ]),
+                const SizedBox(
                   height: 15,
                 ),
-                CustomButtom(
+                const CustomButtom(
                   buttomText: 'Create account',
                 ),
+                const SizedBox(
+                  height: 30,
+                ),
+                RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "By signing up, you agree to our ",
+                        style: TextStyle(
+                          color: Colors.grey[600],
+                        ),
+                      ),
+                      const TextSpan(
+                        text: "Terms",
+                        style: TextStyle(
+                          color: Color(0xff1c9ef5),
+                        ),
+                      ),
+                      TextSpan(
+                        text: ", ",
+                        style: TextStyle(
+                          color: Colors.grey[600],
+                        ),
+                      ),
+                      const TextSpan(
+                        text: "Privacy Policy",
+                        style: TextStyle(
+                          color: Color(0xff1c9ef5),
+                        ),
+                      ),
+                      TextSpan(
+                        text: ", and ",
+                        style: TextStyle(
+                          color: Colors.grey[600],
+                        ),
+                      ),
+                      const TextSpan(
+                        text: "Cookie Use",
+                        style: TextStyle(
+                          color: Color(0xff1c9ef5),
+                        ),
+                      ),
+                      TextSpan(
+                        text: ".",
+                        style: TextStyle(
+                          color: Colors.grey[600],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 50,
+                ),
+                Container(
+                  alignment: Alignment.bottomLeft,
+                  child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'Have an account already? ,',
+                          style:
+                              TextStyle(color: Colors.grey[600], fontSize: 16),
+                        ),
+                        const TextSpan(
+                          text: 'Log in',
+                          style:
+                              TextStyle(color: Color(0xff1c9ef5), fontSize: 16),
+                        )
+                      ],
+                    ),
+                  ),
+                )
               ],
             ),
           ),
