@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:twitter/widgets/post_buttons.dart';
 
 class ForYou extends StatelessWidget {
   const ForYou({super.key});
@@ -12,16 +13,11 @@ class ForYou extends StatelessWidget {
         child: ListView(
           children: [
             Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  height: 60,
-                  width: 60,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.white),
-                  child: Image.asset(
-                    'assets/images/download.jpg',
-                    fit: BoxFit.cover,
-                  ),
+                const CircleAvatar(
+                  radius: 30,
+                  backgroundImage: AssetImage('assets/images/download.jpg'),
                 ),
                 const SizedBox(
                   width: 10,
@@ -64,100 +60,10 @@ class ForYou extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                const Padding(
-                  padding: EdgeInsets.only(left: 25),
-                ),
-                IconButton(
-                  icon: Icon(
-                    Icons.mode_comment_outlined,
-                    color: Colors.grey[700],
-                  ),
-                  onPressed: () {},
-                ),
-                IconButton(
-                  icon: Icon(
-                    Icons.share,
-                    color: Colors.grey[700],
-                  ),
-                  onPressed: () {
-                    // Add your share button onPressed logic here
-                  },
-                ),
-                IconButton(
-                  icon: Icon(
-                    Icons.favorite,
-                    color: Colors.grey[700],
-                  ),
-                  onPressed: () {
-                    // Add your like button onPressed logic here
-                  },
-                ),
-                IconButton(
-                  icon: Icon(
-                    Icons.bar_chart_outlined,
-                    color: Colors.grey[700],
-                  ),
-                  onPressed: () {
-                    // Add your like button onPressed logic here
-                  },
-                ),
-                IconButton(
-                  icon: Icon(
-                    Icons.bookmark_border_outlined,
-                    color: Colors.grey[700],
-                  ),
-                  onPressed: () {
-                    // Add your like button onPressed logic here
-                  },
-                ),
-                IconButton(
-                  icon: Icon(
-                    Icons.ios_share_outlined,
-                    color: Colors.grey[700],
-                  ),
-                  onPressed: () {
-                    // Add your like button onPressed logic here
-                  },
-                ),
-              ],
-            ),
+            const PostButtons(),
           ],
         ),
       ),
-    );
-  }
-}
-
-class PostButtons extends StatelessWidget {
-  const PostButtons({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        IconButton(
-          icon: const Icon(Icons.comment),
-          onPressed: () {
-            // Add your comment button onPressed logic here
-          },
-        ),
-        IconButton(
-          icon: const Icon(Icons.share),
-          onPressed: () {
-            // Add your share button onPressed logic here
-          },
-        ),
-        IconButton(
-          icon: const Icon(Icons.favorite),
-          onPressed: () {
-            // Add your like button onPressed logic here
-          },
-        ),
-      ],
     );
   }
 }
