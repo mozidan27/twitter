@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:twitter/views/following_page.dart';
 import 'package:twitter/views/foryou_page.dart';
+import 'package:twitter/views/pages/communities_page.dart';
+import 'package:twitter/views/pages/home_main_page.dart';
+import 'package:twitter/views/pages/messages_page.dart';
+import 'package:twitter/views/pages/notification_page.dart';
+import 'package:twitter/views/pages/search_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -18,6 +23,14 @@ class _MainPageState extends State<MainPage> {
       _selectedIndex = index;
     });
   }
+
+  final List<Widget> _pages = [
+    const HomeMainPage(),
+    const SearchPage(),
+    const CommunitiesPage(),
+    const NotificationPage(),
+    const MessagesPage()
+  ];
 
   @override
   Widget build(BuildContext context) {
