@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         title: Image.asset(
           'assets/images/X_logo_2023_(white).png',
-          height: 40,
+          height: 32,
         ),
         backgroundColor: const Color(0xff070707),
       ),

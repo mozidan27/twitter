@@ -7,6 +7,7 @@ import 'package:twitter/views/pages/home_main_page.dart';
 import 'package:twitter/views/pages/messages_page.dart';
 import 'package:twitter/views/pages/notification_page.dart';
 import 'package:twitter/views/pages/search_page.dart';
+import 'package:twitter/widgets/tab_bar_widget.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -42,39 +43,13 @@ class _MainPageState extends State<MainPage> {
           centerTitle: true,
           title: Image.asset(
             'assets/images/X_logo_2023_(white).png',
-            height: 35,
+            height: 32,
           ),
           backgroundColor: const Color(0xff070707),
         ),
         body: Column(
           children: [
-            TabBar(
-              indicatorColor: const Color(0xff1d9bf0),
-              indicatorSize: TabBarIndicatorSize.label,
-              indicatorWeight: 5,
-              dividerColor: Colors.grey[900],
-              dividerHeight: 1.3,
-              tabs: const [
-                Tab(
-                  child: Text(
-                    'For you',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600),
-                  ),
-                ),
-                Tab(
-                  child: Text(
-                    'Following',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600),
-                  ),
-                ),
-              ],
-            ),
+            const TabBarWidget(),
             const Expanded(
               child: TabBarView(children: [ForYou(), Following()]),
             ),
@@ -86,7 +61,7 @@ class _MainPageState extends State<MainPage> {
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
-          iconSize: 36,
+          iconSize: 28,
           showSelectedLabels: false,
           showUnselectedLabels: false,
           currentIndex: _selectedIndex,
@@ -109,3 +84,4 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
+
