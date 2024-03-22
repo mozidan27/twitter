@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:twitter/widgets/post_buttons.dart';
 
@@ -10,6 +9,7 @@ class PostView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
+      padding: EdgeInsets.zero,
       children: [
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,

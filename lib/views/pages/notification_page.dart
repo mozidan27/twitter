@@ -7,7 +7,7 @@ class NotificationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text('Hello'),
+        child: Text('Hello notitfecaiton'),
       ),
     );
   }

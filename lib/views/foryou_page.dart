@@ -8,10 +8,7 @@ class ForYou extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: Colors.black,
-      body: Padding(
-        padding: EdgeInsets.all(16),
-        child: PostView(),
-      ),
+      body: Padding(padding: EdgeInsets.all(16), child: PostView()),
     );
   }
 }

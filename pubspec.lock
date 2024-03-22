@@ -75,6 +75,27 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  go_router:
+    dependency: "direct main"
+    description:
+      name: go_router
+      sha256: "7ecb2f391edbca5473db591b48555a8912dde60edd0fb3013bd6743033b2d3f8"
+      url: "https://pub.dev"
+    source: hosted
+    version: "13.2.1"
+  google_nav_bar:
+    dependency: "direct main"
+    description:
+      name: google_nav_bar
+      sha256: "1c8e3882fa66ee7b74c24320668276ca23affbd58f0b14a24c1e5590f4d07ab0"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.0.6"
   leak_tracker:
     dependency: transitive
     description:
@@ -107,6 +128,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.0"
+  logging:
+    dependency: transitive
+    description:
+      name: logging
+      sha256: "623a88c9594aa774443aa3eb2d41807a48486b5613e67599fb4c41c0ad47c340"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0"
   matcher:
     dependency: transitive
     description:
@@ -144,6 +173,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
+  sliding_clipped_nav_bar:
+    dependency: "direct main"
+    description:
+      name: sliding_clipped_nav_bar
+      sha256: f43ba9856d25515faa012f4f3763080f8a93fa6edf11a3c3ca358b8982de6411
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.1"
   source_span:
     dependency: transitive
     description:
@@ -210,3 +247,4 @@ packages:
     version: "13.0.0"
 sdks:
   dart: ">=3.3.0 <4.0.0"
+  flutter: ">=3.16.0"
