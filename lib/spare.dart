@@ -1,86 +1,36 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// import 'package:twitter/views/following_page.dart';
-// import 'package:twitter/views/foryou_page.dart';
-// import 'package:twitter/views/pages/communities_page.dart';
-// import 'package:twitter/views/pages/home_main_page.dart';
-// import 'package:twitter/views/pages/messages_page.dart';
-// import 'package:twitter/views/pages/notification_page.dart';
-// import 'package:twitter/views/pages/search_page.dart';
-// import 'package:twitter/widgets/tab_bar_widget.dart';
+class SpacedStackedContainers extends StatelessWidget {
+  const SpacedStackedContainers({super.key});
 
-// class MainPage2 extends StatefulWidget {
-//   const MainPage2({super.key});
-
-//   @override
-//   State<MainPage2> createState() => _MainPage2State();
-// }
-
-// class _MainPage2State extends State<MainPage2> {
-//   int _selectedIndex = 0;
-
-//   void _navigateBottomBar(int index) {
-//     setState(() {
-//       _selectedIndex = index;
-//     });
-//   }
-
-//   final List<Widget> _pages = [
-//     const HomeMainPage(),
-//     const SearchPage(),
-//     const CommunitiesPage(),
-//     const NotificationPage(),
-//     const MessagesPage()
-//   ];
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return DefaultTabController(
-//       length: 2,
-//       child: Scaffold(
-//         backgroundColor: Colors.black,
-//         appBar: AppBar(
-//           centerTitle: true,
-//           title: Image.asset(
-//             'assets/images/X_logo_2023_(white).png',
-//             height: 32,
-//           ),
-//           backgroundColor: const Color(0xff070707),
-//         ),
-//         body: Column(
-//           children: [
-//             const TabBarWidget(),
-//             const Expanded(
-//               child: TabBarView(children: [ForYou(), Following()]),
-//             ),
-//             Divider(
-//               thickness: 0.4,
-//               height: 1,
-//               color: Colors.grey[700],
-//             ),
-//           ],
-//         ),
-//         bottomNavigationBar: BottomNavigationBar(
-//           iconSize: 28,
-//           showSelectedLabels: false,
-//           showUnselectedLabels: false,
-//           currentIndex: _selectedIndex,
-//           onTap: _navigateBottomBar,
-//           backgroundColor: Colors.black,
-//           type: BottomNavigationBarType.fixed,
-//           items: const [
-//             BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-//             BottomNavigationBarItem(icon: Icon(Icons.search), label: ''),
-//             BottomNavigationBarItem(
-//                 icon: Icon(Icons.people_outlined), label: ''),
-//             BottomNavigationBarItem(
-//                 icon: Icon(Icons.notifications_none), label: ''),
-//             BottomNavigationBarItem(icon: Icon(Icons.mail_outline), label: ''),
-//           ],
-//           selectedItemColor: Colors.white,
-//           unselectedItemColor: Colors.white,
-//         ),
-//       ),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: <Widget>[
+          Container(
+            height: 100,
+            color: Colors.red,
+            // Add your container content if any
+          ),
+          const SizedBox(
+              height:
+                  20), // This SizedBox provides space between the containers
+          Container(
+            height: 100,
+            color: Colors.green,
+            // Add your container content if any
+          ),
+          const SizedBox(
+              height: 20), // Adjust the height for more or less space
+          Container(
+            height: 100,
+            color: Colors.blue,
+            // Add your container content if any
+          ),
+          // Add more containers and SizedBoxes as needed
+        ],
+      ),
+    );
+  }
+}
