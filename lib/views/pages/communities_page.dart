@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class CommunitiesPage extends StatelessWidget {
   const CommunitiesPage({super.key});
@@ -84,36 +82,36 @@ class CommunitiesPage extends StatelessWidget {
                         'Design',
                         style: TextStyle(color: Colors.white),
                       ),
-                      Row(
-                        children: [
-                          Stack(
-                            children: [
-                              Positioned(
-                                left: 12.5,
-                                top: 1.0,
-                                child: Container(
-                                  width: 25,
-                                  height: 25,
-                                  decoration: const BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: Colors.amber),
-                                ),
-                              ),
-                              Positioned(
-                                left: 0.0,
-                                top: 1.0,
-                                child: Container(
-                                  width: 25,
-                                  height: 25,
-                                  decoration: const BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: Colors.red),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
+                      // Row(
+                      //   children: [
+                      //     Stack(
+                      //       children: [
+                      //         Positioned(
+                      //           left: 12.5,
+                      //           top: 1.0,
+                      //           child: Container(
+                      //             width: 25,
+                      //             height: 25,
+                      //             decoration: const BoxDecoration(
+                      //                 shape: BoxShape.circle,
+                      //                 color: Colors.amber),
+                      //           ),
+                      //         ),
+                      //         Positioned(
+                      //           left: 0.0,
+                      //           top: 1.0,
+                      //           child: Container(
+                      //             width: 25,
+                      //             height: 25,
+                      //             decoration: const BoxDecoration(
+                      //                 shape: BoxShape.circle,
+                      //                 color: Colors.red),
+                      //           ),
+                      //         ),
+                      //       ],
+                      //     ),
+                      //   ],
+                      // ),
                     ],
                   ),
                 )

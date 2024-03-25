@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:twitter/spare.dart';
 import 'package:twitter/views/home_page.dart';
 
 void main() {
@@ -13,7 +12,7 @@ class Twitter extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const SpacedStackedContainers(),
+      home: const HomePage(),
       theme: ThemeData(fontFamily: 'Chirp'),
     );
   }
