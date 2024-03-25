@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:twitter/widgets/cusotm_floating_action_button.dart';
 
 class CommunitiesPage extends StatelessWidget {
   const CommunitiesPage({super.key});
@@ -119,6 +120,9 @@ class CommunitiesPage extends StatelessWidget {
             )
           ],
         ),
+      ),
+      floatingActionButton: const CustomFloatingActionButton(
+        icon: Icons.add,
       ),
     );
   }

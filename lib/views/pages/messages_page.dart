@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:twitter/widgets/cusotm_floating_action_button.dart';
 
 class MessagesPage extends StatelessWidget {
   const MessagesPage({super.key, Key});
@@ -91,6 +92,9 @@ class MessagesPage extends StatelessWidget {
             ),
           )
         ],
+      ),
+      floatingActionButton: const CustomFloatingActionButton(
+        icon: Icons.mail_outline,
       ),
     );
   }

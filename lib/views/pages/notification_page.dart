@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:twitter/widgets/cusotm_floating_action_button.dart';
 
 class NotificationPage extends StatelessWidget {
   const NotificationPage({super.key});
@@ -75,6 +76,9 @@ class NotificationPage extends StatelessWidget {
               ),
             )
           ],
+        ),
+        floatingActionButton: const CustomFloatingActionButton(
+          icon: Icons.add,
         ),
       ),
     );

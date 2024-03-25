@@ -65,7 +65,9 @@ class _MainPageState extends State<MainPage> {
             ),
           ],
         ),
-        floatingActionButton: const CustomFloatingActionButton(),
+        floatingActionButton: const CustomFloatingActionButton(
+          icon: Icons.add,
+        ),
         bottomNavigationBar: GNav(
           selectedIndex: _selectedIndex,
           onTabChange: (value) {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:twitter/widgets/cusotm_floating_action_button.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({super.key});
@@ -101,6 +102,9 @@ class SearchPage extends StatelessWidget {
               ),
             )
           ],
+        ),
+        floatingActionButton: const CustomFloatingActionButton(
+          icon: Icons.add,
         ),
       ),
     );
