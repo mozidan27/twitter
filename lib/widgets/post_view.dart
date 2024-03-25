@@ -46,7 +46,7 @@ class PostView extends StatelessWidget {
           height: 20,
         ),
         const Text(
-          "Hello this is zidan and i'm new flutter dev please give me some support",
+          "Hello this is zidan and i'm new flutter dev",
           style: TextStyle(color: Colors.white),
         ),
         const SizedBox(
