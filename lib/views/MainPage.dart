@@ -6,6 +6,7 @@ import 'package:twitter/views/pages/communities_page.dart';
 import 'package:twitter/views/pages/messages_page.dart';
 import 'package:twitter/views/pages/notification_page.dart';
 import 'package:twitter/views/pages/search_page.dart';
+import 'package:twitter/widgets/cusotm_floating_action_button.dart';
 import 'package:twitter/widgets/tab_bar_widget.dart';
 
 class MainPage extends StatefulWidget {
@@ -64,6 +65,7 @@ class _MainPageState extends State<MainPage> {
             ),
           ],
         ),
+        floatingActionButton: const CustomFloatingActionButton(),
         bottomNavigationBar: GNav(
           selectedIndex: _selectedIndex,
           onTabChange: (value) {
